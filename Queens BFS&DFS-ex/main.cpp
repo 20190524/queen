@@ -7,10 +7,10 @@ using namespace std;
 
 int main()
 {
-//    BFSQueenSolver solver(8);
-//    solver.solve();
-    DFSQueenSolver solver(8);
+    BFSQueenSolver solver(8);
     solver.solve();
+//    DFSQueenSolver solver(8);
+//    solver.solve();
     return 0;
 }
 

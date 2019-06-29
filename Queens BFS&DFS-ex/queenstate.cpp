@@ -45,7 +45,7 @@ int QueenState::getCrntQueenNum(){
 //    return _crntQueenNum;
     int num=0;
     for(int c=0;c<_size;c++){
-        if(_sln[c]!=-1)num+=1;
+        if(_sln[c]!=-1)num+=1;//被设置过的点就不会为-1了
     }
     return num;
 }
@@ -64,13 +64,13 @@ bool QueenState::conflict(int i, int j){//现有皇后和之前的不冲突
 }
 
 bool QueenState::isTarget(){//这个地方需要加什么，如何知道目标状态的大小
-    if(_sln[_size-1]!=-1)return true;
+    if(_sln[_size-1]!=-1)return true;//最后一个不是-1了说明目标均已设置好
     return false;
 
 }
 
 QueenState::~QueenState(){
-    delete []_sln;
+    delete []_sln;//有数组作为数据成员的一定要记得
 }
 
 /*void QueenState::setCrntQueenNum(int num){
